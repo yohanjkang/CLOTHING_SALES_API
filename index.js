@@ -1,16 +1,16 @@
 import express from "express";
 import bodyParser from "body-parser";
 
-//import { uniqloRoute, expressRoute } from "./routes/index.js";
+import { uniqloRoute, expressRoute } from "./routes/index.js";
 
 const app = express();
 const PORT = 5000;
 
 app.use(bodyParser.json());
 
-//app.use("/uniqlo", uniqloRoute);
+app.use("/uniqlo", uniqloRoute);
 
-//app.use("/express", expressRoute);
+app.use("/express", expressRoute);
 
 app.get("/", (req, res) => res.send("Hello from Homepage"));
 
